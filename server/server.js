@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser= require('body-parser') // Handling Forms
 const app = express();
-
+var port = 3000;
 var apiRouter = require('./routes/api');
 
 // Middleware
@@ -17,6 +17,6 @@ app.get('/', (req, res) => {
 
 
 // Setting Port
-app.listen(3000, () => { 
-    console.log("HEY")
+app.listen(port, () => { 
+    console.log("Listening on http://localhost:" + port)
 })
