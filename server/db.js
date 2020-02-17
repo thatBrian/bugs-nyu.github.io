@@ -16,7 +16,7 @@ const Event = new mongoose.Schema({
     image:{data:Buffer,contentType:String}
 })
 
-mongoose.model('Profile', Profile)
-mongoose.model('Event',Event)
+mongoose.model('profile', Profile)
+mongoose.model('event',Event)
 var dburl = "mongodb://bugsAdmin:BugsRulez1@ds035533.mlab.com:35533/bugs-database"
 mongoose.connect(dburl,{ useNewUrlParser: true, useUnifiedTopology: true })
