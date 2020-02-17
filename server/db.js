@@ -5,7 +5,10 @@ const Profile = new mongoose.Schema({
     type:{type:String,required:true,enum:['member','alum','eboard','mentor']},
     position:{type:String},
     description:{type:String},
-    image:{data:Buffer, contentType:String}
+    image:{
+        data:{type:String,require:true},
+        extension:{type:String,require:true}
+    }
 })
 
 const Event = new mongoose.Schema({
@@ -13,7 +16,10 @@ const Event = new mongoose.Schema({
     date:{type:Date},
     updated:{type:Date, default:Date.now},
     description:{type:String},
-    image:{data:Buffer,contentType:String}
+    image:{
+        data:{data:Buffer,contentType:String},
+        extension:{type:String,require:true}
+    }
 })
 
 mongoose.model('profile', Profile)
