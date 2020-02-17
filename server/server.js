@@ -1,13 +1,12 @@
 const express = require('express');
 const bodyParser= require('body-parser') // Handling Forms
-var mongoose = require('mongoose')
-require('./db')
-const Profile = mongoose.model('Profile')
 const app = express();
+
+var apiRouter = require('./routes/api');
 
 // Middleware
 app.use(bodyParser.urlencoded({extended: true}))
-
+app.use('/api',apiRouter);
 
 //Routes
 app.get('/', (req, res) => {
