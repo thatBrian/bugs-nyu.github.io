@@ -1,16 +1,9 @@
 const express = require('express');
 const bodyParser= require('body-parser') // Handling Forms
-const MongoClient = require('mongodb').MongoClient
+var mongoose = require('mongoose')
+require('./db')
+const Profile = mongoose.model('Profile')
 const app = express();
-var db
-
-MongoClient.connect('mongodb://admin:Placeh0lder@ds035533.mlab.com:35533/bugs-database', (err, client) => {
-  if (err) return console.log(err)
-  db = client.db() // whatever your database name is
-  app.listen(3000, () => {
-    console.log('listening on 3000')
-  })
-})
 
 // Middleware
 app.use(bodyParser.urlencoded({extended: true}))
@@ -24,7 +17,7 @@ app.get('/', (req, res) => {
 
 
 
-// // Setting Port
-// app.listen(3000, () => { 
-//     console.log("HEY")
-// })
+// Setting Port
+app.listen(3000, () => { 
+    console.log("HEY")
+})
