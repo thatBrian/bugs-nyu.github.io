@@ -14,12 +14,17 @@ const Profile = new mongoose.Schema({
 const Event = new mongoose.Schema({
     name:{type:String, require:true},
     date:{type:Date},
+    location:{
+        name:{type:String},
+        address:{type:String}
+    },
     updated:{type:Date, default:Date.now},
     description:{type:String},
     image:{
         data:{data:Buffer,contentType:String},
         extension:{type:String,require:true}
     }
+    // googleAPI:{} to be decided
 })
 
 mongoose.model('profile', Profile)
