@@ -27,6 +27,12 @@ body {
   flex: 1;
 }
 
+#bugs {
+  font-weight: bold;
+  font-size: 4em;
+  color: #57068c;
+}
+
 #navigation-bar {
   display: flex;
   flex-direction: row;
@@ -60,20 +66,19 @@ body {
   font-weight: bold;
   font-size: 4em;
 }
-#home-welcome{
-  display:flex;
+
+#home-welcome {
+  display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-#bugs {
-  font-weight: bold;
-  font-size: 4em;
-  color: #57068c;
 }
 
 #home-logo {
   height: 4em;
   vertical-align: baseline;
   filter: invert(13%) sepia(59%) saturate(4422%) hue-rotate(270deg) brightness(89%) contrast(117%);
+}
+
+#about-container{
+  overflow-y:scroll;
 }

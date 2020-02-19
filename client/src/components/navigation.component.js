@@ -5,7 +5,7 @@ import {
     Route,
     Link
 } from "react-router-dom";
-function Home() {
+function Navigation() {
     return (
         <div id="navigation-bar">
             <div>
@@ -28,4 +28,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default Navigation;
