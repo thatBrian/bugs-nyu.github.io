@@ -11,17 +11,17 @@ function Navigation() {
             <div>
                 {/* <img id="navigation-logo" src="./logo.svg"></img> */}
             </div>
-            <div class="flex1"></div>
+            <div className="flex1"></div>
             <div>
 
-                <div class="navigation-tabs">
+                <div className="navigation-tabs">
                     <Link to="/about">About</Link>
                 </div>
-                <span class="navigation-tabs">
+                <span className="navigation-tabs">
                     <Link to="/events">Events</Link>
                 </span>
-                <span class="navigation-tabs">
-                    <Link to="/users">Contact</Link>
+                <span className="navigation-tabs">
+                    <Link to="/contact">Contact</Link>
                 </span>
             </div>
         </div>
