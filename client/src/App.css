@@ -83,50 +83,132 @@ body {
   overflow-y: scroll;
 }
 
-#events-container {
-  margin-top:10px;
+#contact-container {
+  margin-top: 10px;
   display: flex;
-  flex: 1;
-  flex-direction:column;
-  align-items: center;
-  overflow:hidden;
-}
-#events-header{
-  display:flex;
   align-items: center;
   flex-direction: column;
 }
-#events-content{
-  overflow-y:scroll;
+
+#contact-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#contact-description {
+  max-width: 656px;
+  text-align: center;
+}
+
+#contact-facebook {
+  display: inline-block;
+  border: 2px solid white;
+  border-radius: 4px;
+}
+
+#contact-facebook:hover{
+  cursor:pointer;
+  background-color: #3b5998;
+  color: white;
+  border: 2px solid #3b5998;
+  border-radius: 4px;
+}
+
+#contact-form {
+  width: 100%;
+  max-width: 656px;
+  margin-top:20px;
+}
+
+.contact-input {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid lightgrey;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.contact-input:focus {
+  border: 2px solid #57068c;
+}
+
+#contact-submit-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#contact-submit {
+  background-color: #57068c;
+  color: white;
+  border: 2px solid #57068c;
+  border-radius: 4px;
+  height: 43px;
+  width: 120px;
+}
+
+#contact-submit>h3 {
+  margin: 0px;
+}
+
+#contact-submit:hover {
+  background-color: white;
+  color: #57068c;
+  cursor: pointer;
+}
+
+#events-container {
+  margin-top: 10px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+#events-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#events-content {
+  overflow-y: scroll;
   -ms-overflow-style: none;
 }
+
 #events-content::-webkit-scrollbar {
   display: none;
 }
 
 .event-container {
-  margin-top:20px;
+  margin-top: 20px;
   max-width: 656px;
   max-height: 143px;
   display: flex;
-  overflow:hidden;
+  overflow: hidden;
 }
-.event-left{
-  flex:1;
-  margin-right:20px;
-  display:flex;
-  flex-direction:column;
+
+.event-left {
+  flex: 1;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
 }
-.event-title{
-  margin:0px;
+
+.event-title {
+  margin: 0px;
 }
-.event-grower{
-  flex:1;
+
+.event-grower {
+  flex: 1;
 }
 
 .event-right {
   display: block;
   min-width: 143px;
   min-height: 143px;
-  background-color:#5DBCD2
+  background-color: #5DBCD2
 }
