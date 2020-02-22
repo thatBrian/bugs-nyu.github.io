@@ -78,9 +78,97 @@ body {
   vertical-align: baseline;
   filter: invert(13%) sepia(59%) saturate(4422%) hue-rotate(270deg) brightness(89%) contrast(117%);
 }
+.about-block{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-#about-container {
-  overflow-y: scroll;
+.profile-lister{
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:center;
+}
+#profile-lister-center{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile-container {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 500px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 4px;
+  display: flex;
+}
+
+.profile-left {
+  display: flex;
+  width: 200px;
+  flex-direction: column;
+}
+
+.profile-image-container {
+  background-color: teal;
+  flex: 1;
+  width: 200px;
+}
+
+.profile-position {
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+
+.profile-information {
+  padding: 10px 10px 0px 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.profile-name {
+  margin: 0px;
+}
+
+.profile-description {
+  flex: 1;
+  min-width: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.social-icons {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.social-icons.facebook:hover {
+  cursor: pointer;
+  filter: invert(35%) sepia(41%) saturate(3050%) hue-rotate(200deg) brightness(96%) contrast(98%);
+}
+
+.social-icons.linkedin:hover {
+  cursor: pointer;
+  filter: invert(31%) sepia(98%) saturate(871%) hue-rotate(169deg) brightness(95%) contrast(104%);
+}
+
+.social-icons.instagram:hover {
+  cursor: pointer;
+  filter: invert(36%) sepia(75%) saturate(3887%) hue-rotate(329deg) brightness(97%) contrast(85%);
+}
+
+.social-icons.github:hover {
+  cursor: pointer;
+  -webkit-filter: invert(.75);
+  filter: invert(.75);
+}
+
+.social-icons.website:hover {
+  cursor: pointer;
+  filter: invert(86%) sepia(28%) saturate(4486%) hue-rotate(359deg) brightness(102%) contrast(104%);
 }
 
 #contact-container {
@@ -107,8 +195,8 @@ body {
   border-radius: 4px;
 }
 
-#contact-facebook:hover{
-  cursor:pointer;
+#contact-facebook:hover {
+  cursor: pointer;
   background-color: #3b5998;
   color: white;
   border: 2px solid #3b5998;
@@ -118,7 +206,7 @@ body {
 #contact-form {
   width: 100%;
   max-width: 656px;
-  margin-top:20px;
+  margin-top: 20px;
 }
 
 .contact-input {
@@ -212,3 +300,12 @@ body {
   min-height: 143px;
   background-color: #5DBCD2
 }
+
+/* @media only screen and (max-width: 1560px) {
+  .profile-lister{
+    display:grid;
+    grid-template-columns: 510px 510px;
+    grid-template-rows: 210px 210px;
+  }
+  
+} */
