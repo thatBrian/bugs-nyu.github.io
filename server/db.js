@@ -8,6 +8,13 @@ const Profile = new mongoose.Schema({
     image:{
         data:{type:String,require:true},
         extension:{type:String,require:true}
+    },
+    links:{
+        github:{type:String},
+        facebook:{type:String},
+        instagram:{type:String},
+        linkedin:{type:String},
+        website:{type:String},
     }
 })
 
