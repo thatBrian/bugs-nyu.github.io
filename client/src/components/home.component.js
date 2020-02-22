@@ -5,7 +5,7 @@ function Home() {
     <div id="home-container">
       <div id="home-center">
         <div id="home-welcome">
-          <img id="home-logo" src="./logo.svg"></img>
+          <img className="home-logo" src="./logo.svg"></img>
           <div>
           <span id="home-message">Welcome to </span>
           <span id="bugs">BUGS</span>
