@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -34,7 +33,7 @@ function App() {
           ebList.push(profiles[profile])
           break;
         case 'alum':
-          if (profiles[profile].position == "Founder") {
+          if (profiles[profile].position === "Founder") {
             foList.push(profiles[profile])
           } else {
             alList.push(profiles[profile])
@@ -42,6 +41,8 @@ function App() {
           break;
         case 'mentor':
           faList.push(profiles[profile])
+          break;
+        default:
           break;
 
       }
@@ -71,6 +72,9 @@ function App() {
             mentor={facultyList}
             founders={foundersList}
           />
+        </Route>
+        <Route exact path="about">
+          <About/>
         </Route>
         <Route exact path="/events">
           <Events eventList={eventList} />

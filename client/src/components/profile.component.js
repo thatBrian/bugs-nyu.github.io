@@ -30,19 +30,19 @@ function Profile(props) {
                 {props.links &&
                     <div>
                         {props.links.github &&
-                            <img className="social-icons github" src="./assets/github.svg"></img>
+                            <img alt="Github Icon" className="social-icons github" src="./assets/github.svg"></img>
                         }
                         {props.links.facebook &&
-                            <img className="social-icons facebook" src="./assets/facebook.svg"></img>
+                            <img alt="Facebook Icon" className="social-icons facebook" src="./assets/facebook.svg"></img>
                         }
                         {props.links.instagram &&
-                            <img className="social-icons instagram" src="./assets/instagram.svg"></img>
+                            <img alt="Instagram Icon" className="social-icons instagram" src="./assets/instagram.svg"></img>
                         }
                         {props.links.linkedin &&
-                            <img className="social-icons linkedin" src="./assets/linkedin.svg"></img>
+                            <img alt="Linkedin Icon" className="social-icons linkedin" src="./assets/linkedin.svg"></img>
                         }
                         {props.links.website &&
-                            <img className="social-icons website" src="./assets/link.svg"></img>
+                            <img alt="Website Icon" className="social-icons website" src="./assets/link.svg"></img>
                         }
                     </div>
                 }

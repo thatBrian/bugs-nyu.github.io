@@ -5,7 +5,7 @@ function Contact() {
     return (
         <div id="contact-container">
             <div id="contact-header">
-                <Link to="/"><img className="home-logo" src="./logo_phone.svg"></img></Link>
+                <Link to="/"><img alt="Bugs Logo for Contacts" className="home-logo" src="./logo_phone.svg"></img></Link>
                 <h1>Contact</h1>
             </div>
             <div id="contact-description">

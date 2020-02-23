@@ -6,7 +6,7 @@ function Team(props) {
     return (
         <div id="about-container">
 
-            <Link to="/"><img className="home-logo" src="./logo_profile.svg"></img></Link>
+            <Link to="/"><img alt="Bugs Logo for Teams" className="home-logo" src="./logo_profile.svg"></img></Link>
 
             <div className="about-block" id="about-eboard">
                 <div className="about-header">

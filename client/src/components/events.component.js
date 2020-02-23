@@ -5,7 +5,7 @@ function Events() {
     return (
         <div id="events-container">
             <div id="events-header">
-                <Link to="/"><img className="home-logo" src="./logo_events.svg"></img></Link>
+                <Link to="/"><img alt="Bugs Log for Events" className="home-logo" src="./logo_events.svg"></img></Link>
                 <h1>Events</h1>
             </div>
             <div id="events-content">
