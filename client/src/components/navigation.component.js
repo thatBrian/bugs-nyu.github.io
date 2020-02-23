@@ -17,6 +17,9 @@ function Navigation() {
                 <div className="navigation-tabs">
                     <Link to="/about">About</Link>
                 </div>
+                <div className="navigation-tabs">
+                    <Link to="/team">Team</Link>
+                </div>
                 <span className="navigation-tabs">
                     <Link to="/events">Events</Link>
                 </span>
