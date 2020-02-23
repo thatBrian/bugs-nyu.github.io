@@ -79,11 +79,21 @@ body {
   filter: invert(13%) sepia(59%) saturate(4422%) hue-rotate(270deg) brightness(89%) contrast(117%);
 }
 
-.about-block {
+#about-container {
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+.about-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom:20px;
+}
+
+
 
 .profile-lister {
   display: flex;
@@ -102,8 +112,9 @@ body {
   width: 500px;
   height: 200px;
   margin: 10px;
-  border-radius: 4px;
+  border-radius: 10px;
   display: flex;
+  overflow: hidden;
 }
 
 .profile-left {
@@ -113,7 +124,7 @@ body {
 }
 
 .profile-image-container {
-  background-color: teal;
+  background-color:#141414;
   flex: 1;
   width: 200px;
   overflow: hidden;
@@ -245,7 +256,7 @@ body {
   border-radius: 4px;
   height: 43px;
   width: 120px;
-  font-size:1rem;
+  font-size: 1rem;
 }
 
 #contact-submit>h3 {
@@ -312,9 +323,9 @@ body {
   background-color: #5DBCD2
 }
 
-#thanks-container{
-  flex:1;
-  display:flex;
+#thanks-container {
+  flex: 1;
+  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
