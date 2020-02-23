@@ -11,7 +11,10 @@ var fs = require('fs');
 router.get('/', (req, res, next) => {
   res.json({"yo":"YO"})
 });
-
+router.get('/contact',(req,res,next)=>{
+    
+    res.redirect("http://localhost:3000/contact/complete")
+})
 router.get('/profiles',(req,res,next)=>{
     Profile.find().then(result=>{
 

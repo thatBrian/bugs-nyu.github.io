@@ -11,6 +11,7 @@ import Navigation from "./components/navigation.component"
 import About from "./components/about.component"
 import Events from "./components/events.component"
 import Contact from "./components/contact.component"
+import Thanks from "./components/thanks.component"
 function App() {
 
   const [eboardList, setEboardList] = useState([])
@@ -75,6 +76,9 @@ function App() {
         </Route>
         <Route exact path="/contact">
           <Contact />
+        </Route>
+        <Route exact path="/thanks">
+          <Thanks />
         </Route>
       </Switch>
     </Router>
