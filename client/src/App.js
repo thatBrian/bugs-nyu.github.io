@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {
@@ -12,7 +12,49 @@ import About from "./components/about.component"
 import Events from "./components/events.component"
 import Contact from "./components/contact.component"
 function App() {
-  const[eventList,setEventList] = useState([])
+
+  const [eboardList, setEboardList] = useState([])
+  const [facultyList, setFacultyList] = useState([])
+  const [foundersList, setFoundersList] = useState([])
+  const [alumniList, setAlumniList] = useState([])
+  const [eventList, setEventList] = useState([])
+
+  async function fetchUrl() {
+    const response = await fetch("http://localhost:8000/api/profiles")
+    const profiles = await response.json();
+    var ebList = []
+    var faList = []
+    var foList = []
+    var alList = []
+    for (const profile in profiles) {
+      switch (profiles[profile].type) {
+        case 'eboard':
+          ebList.push(profiles[profile])
+          break;
+        case 'alum':
+          if (profiles[profile].position == "Founder") {
+            foList.push(profiles[profile])
+          } else {
+            alList.push(profiles[profile])
+          }
+          break;
+        case 'mentor':
+          faList.push(profiles[profile])
+          break;
+
+      }
+    }
+    setEboardList(ebList)
+    setFacultyList(faList)
+    setFoundersList(foList)
+    setAlumniList(alList)
+  }
+  useEffect(() => {
+    fetchUrl();
+  }, []);
+
+
+
   return (
     <Router>
       <Navigation />
@@ -21,10 +63,15 @@ function App() {
           <Home />
         </Route>
         <Route exact path="/about">
-          <About />
+          <About
+            eboard={eboardList}
+            alum={alumniList}
+            mentor={facultyList}
+            founders={foundersList}
+          />
         </Route>
         <Route exact path="/events">
-          <Events eventList ={eventList}/>
+          <Events eventList={eventList} />
         </Route>
         <Route exact path="/contact">
           <Contact />

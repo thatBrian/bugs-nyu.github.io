@@ -6,12 +6,13 @@ function Profile(props) {
             <div className="profile-left">
                 <div className="profile-image-container">
                     <img
+                        className="profile-image"
                         src={props.image && ("data:image/" + props.image.extension + ";base64, " + props.image.data)}
                         alt={"Profile image of " + props.name}
                     ></img>
 
                 </div>
-                {props.position && <span className="profile-position">President</span>}
+                {props.position && <span className="profile-position">{props.position}</span>}
             </div>
             <div className="profile-information">
                 <h3 className="profile-name">
@@ -26,7 +27,7 @@ function Profile(props) {
                         "No Description"
                     }
                 </div>
-                {props.link &&
+                {props.links &&
                     <div>
                         {props.link.github &&
                             <img className="social-icons github" src="./assets/github.svg"></img>
