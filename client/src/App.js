@@ -8,7 +8,8 @@ import {
 } from "react-router-dom";
 import Home from "./components/home.component"
 import Navigation from "./components/navigation.component"
-import About from "./components/about.component"
+import About from "./components/about.component";
+import Team from "./components/team.component"
 import Events from "./components/events.component"
 import Contact from "./components/contact.component"
 import Thanks from "./components/thanks.component"
@@ -63,8 +64,8 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/about">
-          <About
+        <Route exact path="/team">
+          <Team
             eboard={eboardList}
             alum={alumniList}
             mentor={facultyList}
