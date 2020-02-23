@@ -27,11 +27,7 @@ const Event = new mongoose.Schema({
     },
     updated:{type:Date, default:Date.now},
     description:{type:String},
-    image:{
-        data:{data:Buffer,contentType:String},
-        extension:{type:String,require:true}
-    }
-    // googleAPI:{} to be decided
+    link:{type:String},
 })
 
 mongoose.model('profile', Profile)
